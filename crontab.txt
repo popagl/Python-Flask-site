@@ -1,0 +1,1 @@
+@daily /home/popagl/flask/homework6/backup_db.py
