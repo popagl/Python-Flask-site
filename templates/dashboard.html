@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Administrator's - Page</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<div>
+{% block main %}
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/home" class="brand-logo">Administrator's Page</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+</nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br>
+      <h1 class="header center orange-text">This is the Admin's Dashboard</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">{{message}}{{nr}}</h5>
+      </div>
+      <br>
+    </div>
+  </div>
+<!-- dashboard content -->
+<div style="display:flex;justify-content:space-evenly;">
+  <form action = "/total">
+    <button class="waves-effect waves-light btn">Users Total</button>
+  </form>
+  <form action = "/usersinfo">
+    <button href = "/usersinfo" class="waves-effect waves-light btn">Users Info</button>
+  </form>
+  <form action = "/del_user" method="GET">
+    <button class="waves-effect waves-light btn">Delete User</button>
+    <input type="text" placeholder ="User to be deleted" name="email">
+  </form>
+  <a href = "/open_dir" class="waves-effect waves-light btn">List's</a>
+</div>
+  <br><br>
+
+  <!-- tabel
+  <div style = "margin-left:100px;margin-right:100;">
+  <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Item Name</th>
+              <th>Item Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+-->
+  <div class="container">
+    <div class="section">
+
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Made by Materialize</h5>
+          <p class="grey-text text-lighten-4">Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology. Google's goal is to develop a system of design that allows for a unified user experience across all their products on any platform.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Materialize</h5>
+          <ul>
+            <li><a class="white-text" href="https://materializecss.com/">Website</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+        <iframe width="332" height="232" src="https://www.youtube.com/embed/Q8TXgCzxEnw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        <p>Edited by <b>P.G.L</b></p>
+      </div>
+    </div>
+    </div></div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/init.js"></script>
+{% endblock %}
+  </body>
+</html>

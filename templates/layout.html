@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type = "text/css" href="/static/stil.css">
+    <title>{{title}}</title>
+    <style>
+        #roata{
+        float: right;
+        animation: roata 3s ease infinite;
+      }
+@keyframes roata {
+    from{ transform: rotateZ(0deg);}
+    to{ transform: rotateZ(360deg);}
+    }
+
+    </style>
+</head>
+<body>
+<div style="margin-left:50px;margin-right:100px;">
+    <video src = 'static/snow.mp4' muted loop autoplay style = "position:absolute;top:0px;width:1200px;height:160px;object-fit:cover;z-index:-1;opacity:0.8;"></video>
+  <div class="container" style="text-align:center;position:relative;mix-blend-mode:overlay;z-index:1;">
+
+    <h1 class="display-6">Popa George Laurentiu</h1>
+      <p class="lead" ><h4>Work until your signature become's your brand.</h4></p>
+    <div id ="but" style="text-align:center;">
+        <a class="btn btn-primary btn-lg" href="/" role="button">Home Page</a>
+        <a class="btn btn-primary btn-lg" href="/about" role="button">About Me</a>
+        <a class="btn btn-primary btn-lg" href="/register" role="button">Sign UP</a>
+        <a class="btn btn-primary btn-lg" href="/admin" role="button">Admin</a>
+    </div>
+  </div>
+</div>
+<br>
+{% block content %}
+
+{% endblock %}
+
+<div class="card" style="margin-left:50px;margin-right:100px;">
+
+  <div class="card-header">
+    <div style="float:left;margin-left:50px;">
+    <svg id = "roata" width="135" height="135" viewBox="0 0 234 235" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0)">
+    <path d="M224.9 74.98C218.325 58.9085 208.276 44.4902 195.474 32.7582C182.672 21.0263 167.433 12.2711 150.85 7.12C134.888 2.21578 118.056 0.812543 101.503 3.00599C84.9493 5.19943 69.0637 10.938 54.93 19.83C45.1418 25.9824 36.3108 33.5398 28.72 42.26C18.3925 54.0793 10.5645 67.867 5.70758 82.7923C0.850719 97.7176 -0.93446 113.472 0.459598 129.105C1.85366 144.739 6.3981 159.928 13.8191 173.759C21.2402 187.589 31.3842 199.774 43.64 209.58L43.65 209.59C52.9781 217.127 63.4101 223.185 74.58 227.55C88.0139 232.793 102.309 235.479 116.73 235.47C120.27 235.47 123.77 235.31 127.23 234.99C130.16 234.73 133.057 234.357 135.92 233.87C146.055 232.192 155.917 229.154 165.24 224.84C179.286 218.358 191.917 209.173 202.413 197.809C212.908 186.445 221.063 173.125 226.41 158.61C229.167 151.102 231.131 143.327 232.27 135.41C235.232 114.97 232.688 94.1094 224.9 74.98ZM65.86 195.23C60.752 191.916 56.006 188.075 51.7 183.77C34.8132 166.98 25.2237 144.212 25.01 120.4L57.94 153.03L111.25 205.85L115.9 210.46C115.17 210.43 114.43 210.4 113.7 210.36C96.7086 209.565 80.2188 204.349 65.86 195.23ZM206.9 135.41C203.458 153.584 194.584 170.286 181.45 183.31C177.527 187.218 173.264 190.769 168.71 193.92C166.86 195.2 164.95 196.42 163 197.56C155.916 201.74 148.296 204.936 140.35 207.06C139.16 207.38 137.96 207.68 136.75 207.95L27.52 98.72C29.9837 87.7714 34.4449 77.3709 40.68 68.04C44.2166 62.7405 48.288 57.818 52.83 53.35C69.8387 36.5117 92.7963 27.052 116.73 27.02C135.879 26.9565 154.561 32.9217 170.13 44.07C178.095 49.7626 185.117 56.67 190.94 64.54L178.44 75.3801C171.711 66.2604 163.104 58.6902 153.2 53.18C148.887 50.7834 144.348 48.8173 139.65 47.31C132.247 44.9103 124.513 43.6888 116.73 43.69C114.45 43.69 112.19 43.79 109.97 44C98.2321 45.1077 86.9172 48.9512 76.9333 55.2222C66.9493 61.4933 58.5742 70.0172 52.48 80.11C51.33 81.98 50.26 83.9067 49.27 85.89C47.9891 88.4348 46.8507 91.0488 45.86 93.72L53.05 100.91L60.21 108.07L141.75 189.61C147.112 187.758 152.237 185.281 157.02 182.23C158.58 181.25 160.093 180.203 161.56 179.09C164.536 176.878 167.341 174.445 169.95 171.81C179.908 161.776 186.887 149.175 190.11 135.41H150.09V118.74H208.45C208.453 124.333 207.934 129.914 206.9 135.41Z" fill="#31304B"/>
+    </g>
+    <defs>
+    <clipPath id="clip0">
+    <rect width="234" height="235" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg>
+</div>
+
+  <div class="card-body" style="text-align:center;">
+    <a href="/register" style="float:right;margin-right:100px;">Sign Up Here</a>
+      <blockquote class="blockquote mb-0">
+        <h1>Never give up!!!</h1>
+          <p><h4>There is no such thing as ending. Just a new Beginning!</h4></p>
+    </blockquote>
+
+  </div>
+  </div>
+</div>
+<script src="static/main.js"></script>
+</body>
+</html>

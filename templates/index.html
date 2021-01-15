@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<br>
+<div class="login" style="margin-left:50px;">
+    <div style="display:flex;justify-content:left;align-items:center;">
+
+    <form action = "/login" method = "POST">
+        <input type = "text" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <button class="btn btn-primary">Login</button>
+    </form>
+    </div>
+</div>
+    <br>
+<div style="margin-left:50px;"><p>{{message}}</p></div>
+    <br>
+<div>
+    <p style="margin-left:50px;">This is my Home Page.
+     Visit My about page to learn about me. If you Register and Sign Up, you can use my aplication! </p>
+    <p style="margin-left:50px;">Sorry if your eyes heart, this is my demo site and i wanted to transmit my energy:))</p>
+</div>
+<div id = "img" style=" margin-left: 50px;margin-right:100px;position:relative;">
+        <img src="static/img/img1.jpg" alt="img1" width="400px" height="300px">
+        <img src="static/img/img5.jpg" alt="img5" width="400px" height="300px">
+        <img src="static/img/img4.jpg" alt="img4" width="400px" height="300px">
+</div>
+<!--<a href="/register" style="float:right;margin-right:100px;">Sign Up Here</a> -->
+{% endblock %}

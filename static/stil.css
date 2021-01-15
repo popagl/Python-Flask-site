@@ -1,0 +1,23 @@
+html,body
+{
+    box-sizing: border-box;
+    border:0px;
+    margin:0;
+
+}
+
+#img
+{
+
+    display:flex;
+    justify-content:space-evenly;
+    align-items: stretch;
+}
+#roata{
+        float: right;
+        animation: roata 3s ease infinite;
+      }
+@keyframes roata {
+    from{ transform: rotateZ(0deg);}
+    to{ transform: rotateZ(360deg);}
+    }
